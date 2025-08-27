@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-level Dropdown Menu</title>
+    <style>
+      body {
+        margin: 10;
+        font-family: Arial, sans-serif;
+        background: #2c3e50;
+      }
+
+      /* Thanh menu chính */
+      .navbar {
+        background: #1f4d5c;
+        display: flex;
+        padding: 40;
+        list-style: none;
+      }
+
+      .navbar li {
+        position: relative;
+      }
+
+      .navbar > li {
+        flex: 1;
+      }
+
+      .navbar a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: white;
+      }
+
+      .navbar > li:hover > a {
+        background: #e74c3c;
+      }
+
+      /* Menu con cấp 1 */
+      .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #3498db;
+        display: none;
+        min-width: 160px;
+      }
+
+      .navbar li:hover > ul {
+        display: block;
+      }
+
+      .navbar ul li a {
+        padding: 12px 16px;
+        color: #fff;
+        white-space: nowrap;
+      }
+
+      .navbar ul li a:hover {
+        background: #2980b9;
+      }
+
+      /* Menu con cấp 2 */
+      .navbar ul ul {
+        top: 0;
+        left: 100%;
+      }
+
+      /* Menu con cấp 3 */
+      .navbar ul ul ul {
+        left: 100%;
+        top: 0;
+      }
+
+      /* Màu nhấn mạnh Blog 2.2.2 */
+      .highlight {
+        background: #e74c3c !important;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="navbar">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li>
+        <a href="#">Blog</a>
+        <ul>
+          <li><a href="#">Blog 1</a></li>
+          <li>
+            <a href="#">Blog 2</a>
+            <ul>
+              <li><a href="#">Blog 2.1</a></li>
+              <li>
+                <a href="#">Blog 2.2</a>
+                <ul>
+                  <li><a href="#">Blog 2.2.1</a></li>
+                  <li><a href="#" class="highlight">Blog 2.2.2</a></li>
+                  <li><a href="#">Blog 2.2.3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Blog 2.3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Blog 3</a></li>
+          <li><a href="#">Blog 4</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </body>
+</html>

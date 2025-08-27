@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Our Products</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #fff;
+        color: #111;
+      }
+
+      .products-section {
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .products-section h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      .product-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .product {
+        background: #fafafa;
+        border: 1px solid #eee;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        transition: 0.3s ease;
+      }
+
+      .product:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .product img {
+        max-width: 100%;
+        height: 180px;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+
+      .badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #2ecc71;
+        color: white;
+        padding: 4px 8px;
+        font-size: 12px;
+        border-radius: 4px;
+      }
+
+      .icons {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .icons span {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .add-to-cart {
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        width: 100%;
+        background: #000;
+        color: white;
+        padding: 12px;
+        font-size: 14px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .product:hover .add-to-cart {
+        bottom: 0;
+      }
+
+      .product h3 {
+        font-size: 16px;
+        margin: 10px 0 5px;
+      }
+
+      .price {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      .price .new {
+        color: #e74c3c;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      .price .old {
+        text-decoration: line-through;
+        color: #777;
+      }
+
+      .stars {
+        color: #f39c12;
+        font-size: 14px;
+      }
+
+      .stars span {
+        color: #555;
+        font-size: 13px;
+      }
+
+      .colors {
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+        gap: 6px;
+      }
+
+      .color-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid #555;
+        cursor: pointer;
+      }
+
+      .color-red {
+        background: red;
+      }
+      .color-black {
+        background: black;
+      }
+      .color-green {
+        background: green;
+      }
+      .color-blue {
+        background: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="products-section">
+      <h2>Explore Our Products</h2>
+      <div class="product-list">
+        <!-- Item 1 -->
+        <div class="product">
+          <div class="icons">
+            <span>❤</span>
+            <span>👁</span>
+          </div>
+          <img
+            src="https://www.scratchpetfood.com.au/wp-content/themes/scratch-raw/media/dog-food-with-grains-v2.jpg"
+            alt="Dog Food"
+          />
+          <div class="add-to-cart">Add To Cart</div>
+          <h3>Breed Dry Dog Food</h3>
+          <div class="price"><span class="new">$100</span></div>
+          <div class="stars">⭐⭐⭐⭐ <span>(35)</span></div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="product">
+          <div class="icons">
+            <span>❤</span>
+            <span>👁</span>
+          </div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/99/LEI0440_Leica_IIIf_chrom_-_Sn._580566_1951-52-M39_Blitzsynchron_front_view-6531_hf-.jpg"
+            alt="Camera"
+          />
+          <div class="add-to-cart">Add To Cart</div>
+          <h3>CANON EOS DSLR Camera</h3>
+          <div class="price"><span class="new">$360</span></div>
+          <div class="stars">⭐⭐⭐⭐⭐ <span>(95)</span></div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="product">
+          <div class="icons">
+            <span>❤</span>
+            <span>👁</span>
+          </div>
+          <img
+            src="https://surfacecity.vn/wp-content/uploads/L713PL-view-500x500.jpg"
+            alt="Laptop"
+          />
+          <div class="add-to-cart">Add To Cart</div>
+          <h3>ASUS FHD Gaming Laptop</h3>
+          <div class="price"><span class="new">$700</span></div>
+          <div class="stars">⭐⭐⭐⭐⭐ <span>(325)</span></div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="product">
+          <div class="icons">
+            <span>❤</span>
+            <span>👁</span>
+          </div>
+          <img
+            src="https://hazel.com.vn/uploads/danhmuc/bo-duong-trang-da-img.jpg"
+            alt="Cosmetic"
+          />
+          <div class="add-to-cart">Add To Cart</div>
+          <h3>Curology Product Set</h3>
+          <div class="price"><span class="new">$500</span></div>
+          <div class="stars">⭐⭐⭐⭐ <span>(145)</span></div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="product">
+          <span class="badge">NEW</span>
+          <div class="icons">
+            <span>❤</span>
+            <span>👁</span>
+          </div>
+          <img
+            src="https://media.cdn-jaguarlandrover.com/api/v2/images/55880/w/680.jpg"
+            alt="Car"
+          />
+          <div class="add-to-cart">Add To Cart</div>
+          <h3>Kids Electric Car</h3>
+          <div class="price"><span class="new">$960</span></div>
+          <div class="stars">⭐⭐⭐⭐⭐ <span>(65)</span></div>
+          <div class="colors">
+            <div class="color-dot color-red"></div>
+            <div class="color-dot color-black"></div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="product">
+          <div class="icons">
+            <span>❤</span>
+            <span>👁</span>
+          </div>
+          <img
+            src="https://redtape.com/cdn/shop/files/RSL1017_1.jpg?v=1755859973"
+            alt="Shoes"
+          />
+          <div class="add-to-cart">Add To Cart</div>
+          <h3>Jr. Zoom Soccer Cleats</h3>
+          <div class="price"><span class="new">$1160</span></div>
+          <div class="stars">⭐⭐⭐⭐ <span>(35)</span></div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="product">
+          <span class="badge">NEW</span>
+          <div class="icons">
+            <span>❤</span>
+            <span>👁</span>
+          </div>
+          <img
+            src="https://hanoicomputercdn.com/media/product/77201_gamepad_sony_ps4_dualshock_4_wireless_controller_mau_do_cu_dep_main_xin_thay_vo_khong_vo_hop.jpg"
+            alt="Gamepad"
+          />
+          <div class="add-to-cart">Add To Cart</div>
+          <h3>GP11 Shooter USB Gamepad</h3>
+          <div class="price"><span class="new">$660</span></div>
+          <div class="stars">⭐⭐⭐⭐ <span>(55)</span></div>
+          <div class="colors">
+            <div class="color-dot color-red"></div>
+            <div class="color-dot color-black"></div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="product">
+          <div class="icons">
+            <span>❤</span>
+            <span>👁</span>
+          </div>
+          <img
+            src="https://m.media-amazon.com/images/I/71E7c09iTdL._UY1000_.jpg"
+            alt="Jacket"
+          />
+          <div class="add-to-cart">Add To Cart</div>
+          <h3>Quilted Satin Jacket</h3>
+          <div class="price"><span class="new">$660</span></div>
+          <div class="stars">⭐⭐⭐⭐ <span>(55)</span></div>
+          <div class="colors">
+            <div class="color-dot color-blue"></div>
+            <div class="color-dot color-black"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
